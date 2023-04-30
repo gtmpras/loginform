@@ -1,5 +1,6 @@
 import 'package:application1/pages/home_page.dart';
 import 'package:application1/pages/login_page.dart';
+import 'package:application1/util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
@@ -19,13 +20,15 @@ class Practice extends StatelessWidget {
         primarySwatch: Colors.orange,// only apply on the AppBar.
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
   
       routes: {
         "/": (context)=>LoginPage(),
-        "/Login": (context)=>LoginPage(),
+        MyRoutes.homeRoute: (context)=> Homepage(),
+        MyRoutes.loginRoutes:(context) => LoginPage(),
       },
     );
   }
