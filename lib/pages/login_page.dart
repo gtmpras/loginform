@@ -57,7 +57,7 @@ moveToHome(BuildContext context)async{
                         labelText: "Username",
                       ),
                      validator: (Value){
-                      if Value == null || Value.isEmpty){
+                      if (Value == null || Value.isEmpty){
                         return "Username cannot be empty";
                       }
                       return null;
